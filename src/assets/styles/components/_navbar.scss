@@ -1,0 +1,68 @@
+.navbar {
+  background: $navbarBackground;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  @if $enableNavbarBoxShadow {
+    box-shadow: $navbarBoxShadow;
+  }
+  @include generateResponsiveStyle($navbarPadding);
+
+  &Nav, &Items {
+    @include display-flex($align-items: center);
+  }
+
+  &Item {
+    & + & {
+      padding-left: $navbarItemGutter / 2;
+      margin-left: $navbarItemGutter / 2;
+      position: relative;
+
+      &::before {
+        @include position(absolute, 50%, $left: 0);
+        @include size(.2rem, 2rem);
+        content: '';
+        transform: translateY(-50%);
+        background-color: $defaultColor;
+      }
+    }
+  }
+
+  &Link {
+    @include font(
+      $font-size: 2rem,
+      $font-weight: map-get($fontWeights, semi-bold),
+      $color: $navbarLinkColor,
+      $text-decoration: none,
+      $line-height: 1
+    );
+    transition: .3s ease;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      color: $navbarLinkColorHover;
+    }
+
+    &Active {
+      color: $navbarLinkColorActive;
+    }
+  }
+
+  &Brand {
+    display: block;
+
+    img {
+      @include generateResponsiveStyle($navbarBrandSize);
+    }
+  }
+
+  &Collapse {
+    @include position(absolute, 100%, 0, null, 0);
+    background: $navbarBackground;
+
+    @include respond-to-min(md) {
+      position: relative;
+    }
+  }
+}

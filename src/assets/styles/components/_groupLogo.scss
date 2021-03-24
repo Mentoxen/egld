@@ -1,0 +1,68 @@
+$groupLogoWidth: (
+        style: width,
+        default: 30rem,
+        md: 50rem
+);
+
+$groupLogoPadding: (
+        style: padding,
+        default: 3rem,
+        md: 5rem
+);
+
+$groupLogoTitleFontSize: (
+        style: font-size,
+        default: 2.5rem,
+        md: 6rem
+);
+
+$groupLogoSubTitleFontSize: (
+        style: font-size,
+        default: 1.8rem,
+        md: 3.5rem
+);
+
+$groupLogoHeroTitle: (
+        style: font-size,
+        default: 2.5rem,
+        md: 4rem
+);
+
+.groupLogo {
+  color: $defaultColor;
+  position: relative;
+  margin-bottom: 6rem;
+
+  img {
+    @include generateResponsiveStyle($groupLogoWidth)
+  }
+
+  &Title {
+    @include font($primaryFont, null, bold, null, $letter-spacing: .1rem);
+    @include generateResponsiveStyle($groupLogoTitleFontSize);
+  }
+
+  &SubTitle {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    @include generateResponsiveStyle($groupLogoSubTitleFontSize);
+  }
+
+  &Video {
+    @include size(100%, 100%);
+    @include position(absolute, 0, 0, 0, 0);
+    object-fit: cover;
+  }
+}
+
+.hero {
+  &Title {
+    color: $defaultColor;
+    margin-bottom: 2rem;
+    @include generateResponsiveStyle($groupLogoHeroTitle);
+
+    strong {
+      font-family: $secondaryFontBold, 'sans-serif';
+    }
+  }
+}

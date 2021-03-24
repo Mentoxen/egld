@@ -1,0 +1,46 @@
+$sectionReasonPadding: (
+        style: padding,
+        default: 10rem 0 5rem,
+        md: 15rem 1.5rem 10rem,
+        lg: 25rem 0 10rem,
+        xl: 30rem 0 10rem
+);
+
+$sectionReasonLineWrapperMb: (
+        style: margin-bottom,
+        default: 5rem,
+        md: 15rem
+);
+
+$sectionReasonLineWidth: (
+        style: width,
+        md: 54rem,
+        lg: 65rem,
+        xl: 80rem
+);
+
+$sectionReasonLineLeftTop: (
+        style: top,
+        md: -4rem,
+        lg: -9rem,
+        xl: -11rem
+);
+
+$sectionReasonLineRightTop: (
+        style: top,
+        md: -8rem,
+        lg: -12rem,
+        xl: -15rem
+);
+
+$sectionReasonLineRight: (
+        style: right,
+        md: -3rem,
+        lg: 0,
+);
+
+$sectionReasonLineLeft: (
+        style: left,
+        md: -3rem,
+        lg: 0,
+);

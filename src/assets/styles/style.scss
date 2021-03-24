@@ -1,0 +1,12 @@
+//Resets for default html
+@import "vendors/resets";
+
+//Variables, mixins, mediaQueries
+@import "abstracts/abstracts";
+@import "fonts/fonts";
+
+//General style
+@import "layout/layout";
+
+//Components style
+@import "components/components";

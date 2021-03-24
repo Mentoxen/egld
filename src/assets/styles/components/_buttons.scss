@@ -1,0 +1,18 @@
+.btn {
+  @include font($primaryFont, $buttonBaseFontSize, map-get($fontWeights, semi-bold), $text-transform: uppercase, $text-decoration: none);
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 3rem;
+  display: inline-block;
+  @include generateResponsiveStyle($buttonBasePadding);
+
+  &Primary {
+    @include on-event {
+      background: $buttonPrimaryBackgroundHover;
+      color: $buttonPrimaryColorHover;
+    }
+    background: $buttonPrimaryBackground;
+    color: $buttonPrimaryColor;
+  }
+}

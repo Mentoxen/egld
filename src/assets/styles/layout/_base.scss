@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @include font($font-family: $bodyFontFamily, $color: $bodyTextColor);
+  @include generateResponsiveStyle($bodyFontSize);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 28%, rgba(72,99,77,1) 43%, rgba(73,101,78,1) 44%, rgba(192,207,178,1) 85%, rgba(236,237,232,1) 100%);
+  min-height: 100vh;
+}
+
+p {
+  line-height: 1.1;
+}

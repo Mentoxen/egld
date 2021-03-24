@@ -1,0 +1,133 @@
+//global config
+$enableHelperClassesForColor: true;
+$enableGridClasses: true;
+$enableSizeHelperClasses: true;
+$enableSpacingHelperClasses: true;
+
+//colors
+$defaultColor: #fff;
+$defaultTextColor: #000;
+
+$primaryColor: #49654e;
+$secondaryColor: #2d3e32;
+$primaryColorDark: #767676;
+$primaryColorLight: #cacaca;
+$dangerColor: #ff0000;
+
+$themeColors: (
+        primary: $primaryColor,
+        primaryLight: $primaryColorLight,
+        primaryDark: $primaryColorDark,
+        secondary: $secondaryColor,
+        danger: $dangerColor,
+        default: $defaultColor,
+);
+
+//font
+$primaryFont: "Azonix", "Arial", sans-serif;
+$secondaryFont: "Gotham", "Arial", sans-serif;
+$secondaryFontBold: "GothamBold", "Arial", sans-serif;
+
+//body
+$bodyTextColor: $secondaryColor;
+$bodyFontSize: (
+        style: font-size,
+        default: 1.4rem,
+        md: 1.6rem
+);
+$bodyFontFamily: $secondaryFont;
+
+/// Font weights map
+$fontWeights: (
+        thin: 100,
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semi-bold: 600,
+        bold: 700,
+) !default;
+
+$fontSizes: (
+        default: 1.6rem,
+        xs: 1.4rem,
+        sm: 1.9rem,
+        md: 2rem,
+        lg: 2.5rem,
+        xlg: 4rem,
+);
+
+$spacing: (
+        "0": 0,
+        "1": 1rem,
+        "15": 1.5rem,
+        "2": 2rem,
+        "25": 2.5rem,
+        "3": 3rem,
+        "35": 3.5rem,
+        "5": 5rem,
+        "10": 10rem,
+        "Auto": auto
+);
+
+$sizes: (
+        "3": 3rem,
+        "42": 4.2rem,
+        "8": 8rem,
+        "9": 9rem,
+        "100": 10rem,
+        "125": 12.5rem,
+        "150": 15rem,
+);
+
+$breakpoints-min: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+//grid config
+$gridGutter: 30px;
+$gridColumns: 12;
+
+$containerMaxWidth: (
+        style: max-width,
+        default: 100%,
+        sm: 540px,
+        md: 768px,
+        lg: 990px,
+        xl: 1199px
+);
+
+//Buttons
+$buttonBasePadding: (
+        style: padding,
+        default: 1.5rem 3rem 1rem,
+);
+$buttonBaseFontSize: 2rem;
+$buttonPrimaryBackground: $defaultColor;
+$buttonPrimaryColor: $primaryColor;
+$buttonPrimaryBackgroundHover: $buttonPrimaryColor;
+$buttonPrimaryColorHover: $buttonPrimaryBackground;
+
+//navbar
+$enableNavbarBoxShadow: true;
+$navbarBoxShadow: 0 .2rem 1.2rem 0 rgba(0, 0, 0, .1);
+$navbarBackground: $defaultTextColor;
+$navbarPadding: (
+        style: padding,
+        default: 3rem 0
+);
+
+$navbarLinkColor: $defaultColor;
+$navbarLinkColorHover: $primaryColor;
+$navbarLinkColorActive: $primaryColor;
+
+$navbarItemGutter: 3rem;
+
+$navbarBrandSize: (
+        style: max-width,
+        default: 10rem,
+        lg: 9rem
+);

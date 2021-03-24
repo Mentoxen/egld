@@ -1,0 +1,42 @@
+@if $enableHelperClassesForColor {
+  @each $color, $value in $themeColors {
+    .text#{capitalize($color)} {
+      color: $value !important;
+    }
+    .background#{capitalize($color)} {
+      background-color: $value !important;
+    }
+  }
+}
+
+@each $key, $value in $fontSizes {
+  .text#{capitalize($key)} {
+    font-size: $value !important;
+  }
+}
+
+.text {
+  &Underline {
+    text-decoration: underline;
+
+    &None {
+      text-decoration: none;
+    }
+  }
+
+  &Center {
+    text-align: center;
+  }
+
+  &Right {
+    text-align: right;
+  }
+
+  &Left {
+    text-align: left;
+  }
+}
+
+.sectionTitle {
+  @include font($primaryFont, 2.5rem, $color: $defaultColor)
+}

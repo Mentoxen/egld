@@ -1,0 +1,96 @@
+.section {
+  &Egld {
+    @include font($secondaryFont, 2rem, null, null, $defaultColor, $line-height: 1.2);
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    .icon {
+      max-width: 7rem;
+      margin-right: 3rem;
+    }
+
+    &Title {
+      @include font($secondaryFontBold, 3rem);
+    }
+
+    &Pattern {
+      @include position(absolute, 0, 100%);
+      transform: translate(50%, -50%);
+      max-width: 35rem;
+    }
+  }
+
+  &Contact {
+    padding: 8rem 1.5rem;
+    border-top: .3rem solid $secondaryColor;
+
+    &Title {
+      @include font($primaryFont, 3.7rem);
+    }
+
+    a {
+      font-size: 1.8rem;
+      @include respond-to-min(sm) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &Hero {
+    @include display-flex($align-items: center);
+    padding-bottom: 10rem;
+    min-height: 100vh;
+
+    @include respond-to-min(lg) {
+      margin-bottom: 30rem;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &Separator {
+    @include generateResponsiveStyle($sectionSeparatorPadding);
+
+    &Title {
+      font-family: $primaryFont;
+      @include generateResponsiveStyle($sectionSeparatorFontSize)
+    }
+  }
+
+  &Statistics {
+    @include generateResponsiveStyle($sectionStatisticsPadding)
+  }
+
+  &Reasons {
+    background-position: top;
+    overflow: hidden;
+    @include generateResponsiveStyle($sectionReasonPadding);
+
+    &Line {
+      position: absolute;
+      @include generateResponsiveStyle($sectionReasonLineWidth);
+
+      &Left {
+        @include generateResponsiveStyle($sectionReasonLineLeftTop, $sectionReasonLineLeft);
+      }
+
+      &Right {
+        @include generateResponsiveStyle($sectionReasonLineRightTop, $sectionReasonLineRight);
+      }
+
+      &Wrapper {
+        @include generateResponsiveStyle($sectionReasonLineWrapperMb);
+      }
+    }
+  }
+
+  &Intro {
+    @include generateResponsiveStyle($sectionIntroPadding);
+  }
+}
